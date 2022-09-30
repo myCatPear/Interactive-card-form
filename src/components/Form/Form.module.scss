@@ -1,0 +1,45 @@
+@import "src/common/styles/variable";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 400px;
+  padding: 5px 10px;
+  &__dataCard {
+    display: flex;
+    gap: 15px;
+  }
+}
+
+.input {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid $Light;
+  padding: 10px 5px;
+  font-family: inherit;
+  margin-top: 5px;
+}
+
+.label {
+  text-transform: uppercase;
+  &__date {
+    display: flex;
+    gap: 15px;
+    >input {
+      max-width: 80px;
+    }
+  }
+}
+
+.span {
+  max-width: 1.1rem;
+}
+
+.button {
+  padding: 10px 10px;
+  background-color: $Very_dark;
+  color:$Light;
+  border-radius: 5px;
+}

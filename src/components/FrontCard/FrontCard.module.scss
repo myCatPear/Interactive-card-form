@@ -1,0 +1,20 @@
+@import "src/common/styles/variable";
+.frontCard {
+  color: $Light;
+  position: relative;
+  &__cardLogo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  &__cardNumber {
+    position: absolute;
+    bottom: 80px;
+    left: 30px;
+  }
+  &__cardNameAndDate {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+  }
+}
