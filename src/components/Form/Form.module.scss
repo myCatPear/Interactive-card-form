@@ -3,7 +3,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 40px;
   max-width: 400px;
   padding: 5px 10px;
   &__dataCard {
@@ -20,10 +20,12 @@
   padding: 10px 5px;
   font-family: inherit;
   margin-top: 5px;
+  font-size: 16px;
 }
 
 .label {
   text-transform: uppercase;
+  position: relative;
   &__date {
     display: flex;
     gap: 15px;
@@ -42,4 +44,14 @@
   background-color: $Very_dark;
   color:$Light;
   border-radius: 5px;
+}
+
+.error {
+  background-color: $error;
+  color:$Light;
+  &__span {
+    color:$error;
+    font-size: 15px;
+    position: absolute;
+  }
 }
