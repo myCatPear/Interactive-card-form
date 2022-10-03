@@ -1,11 +1,20 @@
 @import "src/common/styles/variable";
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   gap: 40px;
   max-width: 400px;
   padding: 5px 10px;
+  @media screen and (max-width: 410px) {
+    gap: 5px;
+  }
   &__dataCard {
     display: flex;
     gap: 15px;
@@ -21,6 +30,9 @@
   font-family: inherit;
   margin-top: 5px;
   font-size: 16px;
+ @media screen and (max-width: 410px) {
+   font-size: 14px;
+ }
 }
 
 .label {
@@ -49,9 +61,18 @@
 .error {
   background-color: $error;
   color:$Light;
+  @media screen and (max-width: 410px){
+
+  }
   &__span {
     color:$error;
     font-size: 15px;
     position: absolute;
+    @media screen and (max-width: 410px){
+      font-size: 0;
+    }
+    &_monthYear {
+      top: 71px;
+    }
   }
 }

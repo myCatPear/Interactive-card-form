@@ -1,0 +1,18 @@
+@import "src/common/styles/variable";
+.successForm {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  &__button {
+    padding: 10px 10px;
+    background-color: $Very_dark;
+    border-radius: 5px;
+    color:$White;
+    font-family: inherit;
+    width: 100% ;
+    cursor: pointer;
+  }
+}

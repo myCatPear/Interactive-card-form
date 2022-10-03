@@ -1,20 +1,38 @@
 @import "src/common/styles/variable";
+
 .frontCard {
-  color: $Light;
+  color: $White;
   position: relative;
+  @media screen and (max-width: 940px) {
+    z-index: 1;
+    &__cardIMG {
+      width: 327px;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 410px) {
+    &__cardIMG {
+      width: 300px;
+      height: auto;
+    }
+  }
+
   &__cardLogo {
     position: absolute;
     top: 30px;
     left: 30px;
   }
+
   &__cardNumber {
     position: absolute;
     bottom: 80px;
     left: 30px;
   }
+
   &__cardNameAndDate {
     position: absolute;
     bottom: 20px;
     left: 30px;
   }
+
 }

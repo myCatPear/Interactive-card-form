@@ -1,1 +1,13 @@
 export const EMPTY_STRING = '';
+export const PLACEHOLDER_NAME = 'e.g. Denis Tavabilov';
+export const PLACEHOLDER_CARD_NUMBER = 'e.g. 1234 5678 9876 0000';
+export const PLACEHOLDER_CARD_MONTH = 'MM';
+export const PLACEHOLDER_CARD_YEAR = 'YY';
+export const PLACEHOLDER_CARD_CVC = 'e.g. 123';
+export const DEFAULT_CARD_NAME = 'Denis Tavabilov';
+export const DEFAULT_CARD_NUMBER = '0000000000000000';
+export const DEFAULT_CARD_MONTH = '00';
+export const DEFAULT_CARD_YEAR = '00';
+export const DEFAULT_CARD_CVC = '***';
+export const CARD_NAME_ERROR_MESSAGE = 'Wrong format';
+export const CARD_NUMBER_ERROR_MESSAGE = 'Wrong format';

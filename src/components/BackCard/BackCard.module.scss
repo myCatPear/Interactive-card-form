@@ -1,5 +1,31 @@
+@import "src/common/styles/variable";
 .backCard {
+  position: relative;
+  @media screen and (max-width: 940px) {
+    position: absolute;
+    top:-107px
+  }
   &__backPhoto {
-    margin-left: 50px;
+    width: 100%;
+    height: auto;
+    margin-left:50px;
+    @media screen and (max-width: 940px) {
+      margin-left:10px;
+      width: 327px;
+      height: auto;
+    }
+    @media screen and (max-width: 410px) {
+        width: 300px;
+        height: auto;
+    }
+  }
+  &__cvc {
+    color: $White;
+    position: absolute;
+    top: 110px;
+    right: 0;
+    @media screen and (max-width: 940px) {
+      right: 50px;
+    }
   }
 }
