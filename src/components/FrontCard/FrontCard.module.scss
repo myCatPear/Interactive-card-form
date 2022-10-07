@@ -27,12 +27,24 @@
     position: absolute;
     bottom: 80px;
     left: 30px;
+    @media screen and (max-width: 410px) {
+     bottom: 60px;
+    }
   }
 
   &__cardNameAndDate {
     position: absolute;
     bottom: 20px;
     left: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    @media screen and (max-width: 940px) {
+      width: 89%;
+    }
+    @media screen and (max-width: 410px) {
+      width: 89%;
+    }
   }
 
 }

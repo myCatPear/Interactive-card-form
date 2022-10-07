@@ -53,7 +53,6 @@ export const Form = () => {
 
     const onInputMonthChange = (event: ChangeEvent<HTMLInputElement>) => {
         const symbol = event.currentTarget.value;
-        console.log(symbol)
         if (checkForMaxLengthString(state.month, 2)) {
             dispatch(setIsCardMonthOrYearError(false))
             dispatch(setCardMonth(symbol))
@@ -84,10 +83,10 @@ export const Form = () => {
     const onSubmitFormClick = (event: React.MouseEvent<HTMLInputElement>) => {
         event.preventDefault()
         if (state.name.split(' ').length < 2) dispatch(setIsCardNameError(true))
-        if (state.number.length < 16) dispatch(setIsCardNumberError(true))
-        if (state.month.length < 2 || state.year.length < 2) dispatch(setIsCardMonthOrYearError(true))
-        if (state.cvc.length < 3) dispatch(setIsCardCvcError(true))
-        dispatch(setIsValidForm(true))
+        else if (state.number.length < 16) dispatch(setIsCardNumberError(true))
+        else if (state.month.length < 2 || state.year.length < 2) dispatch(setIsCardMonthOrYearError(true))
+        else if (state.cvc.length < 3) dispatch(setIsCardCvcError(true))
+        else dispatch(setIsValidForm(true))
     }
 
     return (
@@ -117,28 +116,31 @@ export const Form = () => {
                 <label className={`${style.label}`}>
                     <span className={`${style.span}`}>exp.date (mm/yy)</span>
                     <div className={style.label__date}>
-                        <input className={`${style.input} ${state.isCardMonthOrYearError && style.error}`}
-                               type="number"
-                               placeholder={PLACEHOLDER_CARD_MONTH}
-                               onChange={onInputMonthChange}
-                               value={state.month}
+                        <input
+                            className={`${style.input} ${state.isCardMonthOrYearError && style.error}`}
+                            type="number"
+                            placeholder={PLACEHOLDER_CARD_MONTH}
+                            onChange={onInputMonthChange}
+                            value={state.month}
                         />
                         {state.isCardMonthOrYearError && <span
                             className={`${style.error__span} ${style.error__span_monthYear}`}>{CARD_NUMBER_ERROR_MESSAGE}</span>}
-                        <input className={`${style.input} ${state.isCardMonthOrYearError && style.error}`}
-                               type="number"
-                               placeholder={PLACEHOLDER_CARD_YEAR}
-                               onChange={onInputYearChange}
-                               value={state.year}
+                        <input
+                            className={`${style.input} ${state.isCardMonthOrYearError && style.error}`}
+                            type="number"
+                            placeholder={PLACEHOLDER_CARD_YEAR}
+                            onChange={onInputYearChange}
+                            value={state.year}
                         />
                     </div>
                 </label>
                 <label className={style.label}>cvc
-                    <input className={`${style.input} ${state.isCardCVCError && style.error}`}
-                           placeholder={PLACEHOLDER_CARD_CVC}
-                           onChange={onInputCvcChange}
-                           value={state.cvc}
-                           type="number"
+                    <input
+                        className={`${style.input} ${state.isCardCVCError && style.error}`}
+                        placeholder={PLACEHOLDER_CARD_CVC}
+                        onChange={onInputCvcChange}
+                        value={state.cvc}
+                        type="number"
                     />
                     {state.isCardCVCError && <span
                         className={style.error__span}>{CARD_NUMBER_ERROR_MESSAGE}</span>}
